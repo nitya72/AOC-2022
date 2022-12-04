@@ -35,6 +35,7 @@ class Day2 {
                 sum += 1 + 6;
             }
         }
+
         System.out.println(sum);
     }
 }
