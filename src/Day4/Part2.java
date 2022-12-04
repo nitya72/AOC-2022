@@ -8,7 +8,7 @@ public class Part2 {
         Scanner sc = new Scanner(System.in);
         int count = 0;
 
-        for (int i=0; i<1000;i++) {
+        for (int i = 0; i < 1000; i++) {
             String st = sc.nextLine();
             String[] pairs = st.split(",");
             String[] pair1 = pairs[0].split("-");
@@ -18,13 +18,13 @@ public class Part2 {
             int p3 = Integer.parseInt(pair2[0]);
             int p4 = Integer.parseInt(pair2[1]);
             int max = Math.max(p2, p4);
-            int[] hash1 = new int[max+1];
-            for(int j=p1;j<=p2;j++) {
+            int[] hash1 = new int[max + 1];
+            for (int j = p1; j <= p2; j++) {
                 hash1[j]++;
             }
 
-            for(int j=p3;j<=p4;j++) {
-                if(hash1[j] > 0) {
+            for (int j = p3; j <= p4; j++) {
+                if (hash1[j] > 0) {
                     count++;
                     break;
                 }
