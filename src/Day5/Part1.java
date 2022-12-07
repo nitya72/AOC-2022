@@ -101,18 +101,18 @@ public class Part1 {
             int count = Integer.parseInt(part[1]);
             int from = Integer.parseInt(part[3]) - 1;
             int to = Integer.parseInt(part[5]) - 1;
-            System.out.println(count+" "+from+" "+to);
+            System.out.println(count + " " + from + " " + to);
 
             List<String> items = new ArrayList<>();
             Stack<String> fromStack = new Stack<>();
             Stack<String> toStack = new Stack<>();
-            for (int j=0; j< count;j++) {
+            for (int j = 0; j < count; j++) {
                 fromStack = listStack.get(from);
                 String value = fromStack.pop();
                 items.add(value);
             }
 
-            for(int j=items.size()-1;j>=0;j--) {
+            for (int j = items.size() - 1; j >= 0; j--) {
                 toStack = listStack.get(to);
                 toStack.push(items.get(j));
             }
@@ -124,9 +124,9 @@ public class Part1 {
         }
 
         String result = "";
-        for(int i=0;i<listStack.size();i++) {
+        for (int i = 0; i < listStack.size(); i++) {
             Stack stack = listStack.get(i);
-            result+= stack.pop();
+            result += stack.pop();
         }
         System.out.println(result);
     }
